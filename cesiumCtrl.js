@@ -8,7 +8,7 @@ app.controller("cesiumCtrl", function($scope,$http) {
 
 	
 	//for list of city
-	$http.get("http://api.openweathermap.org/data/2.5/group?id=3590249,3672521,524901,1273294,1275339,1275004,5115985,1006984,671118,1255364,1816670,1850147,4229546,2657896,292223,6691831&unitsq=metric").success(
+	$http.get("http://api.openweathermap.org/data/2.5/group?id=3590249,3672521,524901,1273294,1275339,1275004,5115985,1006984,671118,1255364,1816670,1850147,4229546,2657896,292223,6691831,6058560,2800866,5506956,3369157,1168197,2063523,2147714,1522751,2193733,4398103&unitsq=metric").success(
 	function(response){
 		var cityData=response.list;
 		var city=[];
@@ -89,7 +89,7 @@ function forCurrentCity(){
 					height : 24
 				},
 				label : {
-					text : CcityData.name+" (Current Location)",
+					text : CcityData.name,
 					font : '16pt monospace',
 					style: Cesium.LabelStyle.FILL_AND_OUTLINE,
 					outlineWidth : 2,
